@@ -19,8 +19,8 @@ app.use(cookieParser(
 ));
 const PORT = process.env.PORT || 3000;
 
-app.use(recipeRouter)
-app.use(userRouter)
+app.use('/api', recipeRouter)
+app.use('/api', userRouter);
 app.use('/', express.static('./frontend'));
 app.get('/*', (req, res) => res.sendFile('/frontend/index.html', { root: process.env.PWD }));
 

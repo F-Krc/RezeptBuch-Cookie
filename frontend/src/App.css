@@ -1,0 +1,254 @@
+*{
+  padding:0 ;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: lightgray;
+}
+
+.container {
+  width: 800px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.navbar {
+  background-color: #333;
+  padding: 10px;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item {
+  color: white;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+}
+
+.recipe-form {
+  width: 100%;
+  height: 80%;
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+
+.recipe-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.recipe-form input,
+.recipe-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.recipe-form textarea {
+  height: 120px;
+}
+
+.recipe-form button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.recipe-form button:hover {
+  background-color: #555;
+}
+
+.recipe-list {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.recipe-list h2 {
+  margin-bottom: 10px;
+}
+
+.recipe-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recipe-list li {
+  margin-bottom: 5px;
+}
+
+.recipe-list a {
+  text-decoration: none;
+  color: #333;
+}
+
+.recipe-list a:hover {
+  text-decoration: underline;
+}
+
+.search-bar {
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+}
+
+.search-bar input {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.search-bar button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #555;
+}
+
+.login-container,
+.register-container {
+  width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+
+.login-container h2,
+.register-container h2 {
+  margin-bottom: 10px;
+}
+
+.login-container form label,
+.register-container form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-container form input,
+.register-container form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.login-container form button,
+.register-container form button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.login-container form button:hover,
+.register-container form button:hover {
+  background-color: #555;
+}
+
+.login-container .error-message,
+.register-container .error-message {
+  color: red;
+  margin-top: 5px;
+}
+
+.login-container .success-message,
+.register-container .success-message {
+  color: green;
+  margin-top: 5px;
+}
+
+.register-ask-container {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.register-ask-container span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.register-ask-container a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.recipe {
+  width: 100%;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
+
+.recipe h3 {
+  margin-bottom: 10px;
+}
+
+.recipe p {
+  margin-bottom: 15px;
+}
+
+.recipe button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.recipe button:hover {
+  background-color: #555;
+}
+
+
+@media (max-width: 468px) {
+  .container,
+  .recipe-form,
+  .recipe-list,
+  .search-bar,
+  .login-container,
+  .register-container,
+  .recipe {
+    width: 410px;
+  }
+  .recipe {
+    width: 390px;
+  }
+}
