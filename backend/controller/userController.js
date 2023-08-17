@@ -29,7 +29,11 @@ export async function loginUserController(req, res) {
         // console.log(token);
         return res
           .status(200)
-          .cookie('accessToken', token, { httpOnly: true })
+          .cookie('accessToken', token, {
+            httpOnly: true,
+            secure: true,
+            maxAge: process.env.SESSION_EXPIRATION_IN_MINUTES * 60 * 1000,
+          })
           .send(user);
       }
       return res.status(404).json({ msg: 'User not found!' });
