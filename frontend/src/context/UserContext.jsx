@@ -39,7 +39,6 @@ const UserProvider = ({ children }) => {
   };
 
   const logoutUser = () => {
-    setUserToken(null);
     setIsLoggedIn(false);
     localStorage.removeItem('loggedInUser');
   };
