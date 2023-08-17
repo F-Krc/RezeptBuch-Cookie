@@ -29,7 +29,7 @@ export async function loginUserController(req, res) {
         // console.log(token);
         return res
           .status(200)
-          .cookie('accessToken', token, { httpOnly: true, domain: 'localhost', secure: true })
+          .cookie('accessToken', token, { httpOnly: true, domain: 'localhost' })
           .send(user);
       }
       return res.status(404).json({ msg: 'User not found!' });

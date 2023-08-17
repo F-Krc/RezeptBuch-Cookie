@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://rezeptbuch.onrender.com',
+        target: 'http://rezeptbuch.onrender.com',
         changeOrigin: true,
         secure: false,
       },

@@ -34,6 +34,7 @@ const RecipeProvider = ({ children }) => {
         withCredentials: true,
       });
       setRecipes((prevRecipes) => [...prevRecipes, response.data]);
+      fetchRecipes()
     } catch (error) {
       console.log(error);
     }
