@@ -29,7 +29,7 @@ export async function loginUserController(req, res) {
         // console.log(token);
         return res
           .status(200)
-          .cookie('accessToken', token, { httpOnly: true, domain: 'localhost' })
+          .cookie('accessToken', token, { httpOnly: true })
           .send(user);
       }
       return res.status(404).json({ msg: 'User not found!' });
@@ -43,7 +43,6 @@ export async function loginUserController(req, res) {
 
 export const getUserController = async (req, res) => {
   const userId = req.params.id;
-  // console.log('User ID:', userId);
 
   try {
     const user = await userModel.findById(userId);
